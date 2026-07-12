@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stock ticker</title>
+    <title>Photon - Real-Time Stock Ticker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
-   <h1>Photon Stock Ticker</h1> 
-   <p>Waiting for stock updates...</p>
+
+    <div class="container">
+
+        <h1>📈 Photon Stock Ticker</h1>
+
+        <p>
+            Real-Time Stock Price Dashboard using FastAPI and WebSockets
+        </p>
+
+        <hr>
+
+        <h3>Connection Status</h3>
+
+        <p id="status">
+            Connecting...
+        </p>
+
+        <hr>
+
+        <h3>Server Messages</h3>
+
+        <div id="messages">
+            Waiting for server messages...
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js"></script>
+
 </body>
 </html>
