@@ -7,7 +7,7 @@ Week 1:
 - HTML template configuration
 
 """
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -23,7 +23,28 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse(
-        "index.html",
-        {"request": request}
-    )
+   return templates.TemplateResponse(
+    request=request,
+    name="index.html"
+)
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    # Accept the client's WebSocket connection
+    await websocket.accept()
+    print("Client connected")
+
+    try:
+        while True:
+            # Receive a message from the client
+            message = await websocket.receive_text()
+            print("Received:", message)
+
+            # Send the same message back (Echo)
+            await websocket.send_text(message)
+
+    except WebSocketDisconnect:
+        print("Client disconnected")
+
+    except Exception as e:
+        print("Error:", e)
