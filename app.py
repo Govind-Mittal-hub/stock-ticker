@@ -25,7 +25,8 @@ templates = Jinja2Templates(directory="templates")
 async def home(request: Request):
    return templates.TemplateResponse(
     request=request,
-    name="index.html"
+    name="index.html",
+    context={}
 )
 
 @app.websocket("/ws")
