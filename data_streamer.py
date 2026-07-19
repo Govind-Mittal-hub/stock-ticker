@@ -9,3 +9,8 @@ stocks = {
     "AMZN": 210.00,
     "MSFT": 420.00
 }
+def update_prices():
+    for stock in stocks:
+        change = random.uniform(-3, 3)
+        stocks[stock] += change
+        stocks[stock] = round(stocks[stock], 2)
