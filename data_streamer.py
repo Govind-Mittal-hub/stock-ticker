@@ -12,6 +12,7 @@ stocks = {
 }
 
 
+# Updates prices with small random changes
 def update_prices():
     for stock in stocks:
         change = random.uniform(-3, 3)
