@@ -22,7 +22,8 @@ def update_prices():
 async def generate_stock_data():
     while True:
         update_prices()
-        print(stocks)
+        for ticker, price in stocks.items():
+         print(f"{ticker}: ₹{price}")
         await asyncio.sleep(1)
         if __name__ == "__main__":
             asyncio.run(generate_stock_data())
