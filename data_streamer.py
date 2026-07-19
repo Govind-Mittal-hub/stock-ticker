@@ -24,3 +24,5 @@ async def generate_stock_data():
         update_prices()
         print(stocks)
         await asyncio.sleep(1)
+        if __name__ == "__main__":
+            asyncio.run(generate_stock_data())
