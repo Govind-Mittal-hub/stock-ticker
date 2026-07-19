@@ -27,3 +27,13 @@ async def generate_stock_data():
         await asyncio.sleep(1)
         if __name__ == "__main__":
             asyncio.run(generate_stock_data())
+            def get_stock_data():
+             data = []
+
+    for ticker, price in stocks.items():
+        data.append({
+            "ticker": ticker,
+            "price": price
+        })
+
+    return data
