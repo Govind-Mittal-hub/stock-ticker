@@ -1,4 +1,6 @@
 # Mock Data Streamer for Photon
+import random
+import asyncio
 
 stocks = {
     "AAPL": 190.00,
