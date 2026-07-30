@@ -44,8 +44,12 @@ p {
 }
 
 #status {
+    display: inline-block;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 10px 20px;
+    border-radius: 20px;
     font-weight: bold;
-    color: blue;
     margin-bottom: 20px;
 }
 
