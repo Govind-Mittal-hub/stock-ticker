@@ -62,3 +62,23 @@ p {
         min-height: 120px;
     }
 }
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #messages {
+        min-height: 100px;
+        font-size: 14px;
+    }
+}
