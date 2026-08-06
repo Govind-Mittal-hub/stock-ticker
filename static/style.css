@@ -178,3 +178,20 @@ p {
 .footer p {
     margin: 6px 0;
 }
+.dashboard-header {
+    background: linear-gradient(135deg, #2563eb, #1f2937);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 0;
+}
