@@ -166,3 +166,15 @@ p {
     margin: 0;
     font-size: 14px;
 }
+.footer {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 6px 0;
+}
