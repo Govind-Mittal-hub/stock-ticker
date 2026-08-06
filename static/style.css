@@ -135,3 +135,34 @@ p {
     font-size: 18px;
     font-weight: 600;
 }
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 14px;
+}
